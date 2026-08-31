@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+}
+#base{
+    margin: 100px;
+    width: 50%;
+    height: 80%;
+    border: 5px solid red;
+}
+
+a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+}
+
+h1{
+    margin: 2px;
+    border: 1px solid blue;
+    text-align: center;
+
+}
+
+.caja{
+    margin: 5px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#caja2{
+    border: 3px solid yellow;
+    background-color: red;
+    position: relative; /*Para mover a gusto cualquier objeto, 
+    relative: para moverlo de punto inicial donde se creo
+    absolute: para que el movimiento empiece desde el punto 0,0*/
+}
