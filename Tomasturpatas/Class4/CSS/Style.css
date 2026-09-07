@@ -1,0 +1,51 @@
+:root {
+    --color-bg: #FDF8F2;
+    --color-text: #201A2B;
+    --color-primary: #FF4D6D;
+    --color-primary-hover: #E63955;
+    --color-accent: #FFC93C;
+    --color-secondary: #00B4A0;
+    --color-surface: #F0EAE0;
+    --color-border: #E3D9C9;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+}
+
+
+.cubo {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary);
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    gap: 8px;
+    z-index: 100;
+}
+
+.circulo {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 8px;
+    top: 0;
+    z-index: 100;
+}

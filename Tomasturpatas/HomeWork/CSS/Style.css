@@ -1,0 +1,104 @@
+:root {
+    --color-bg: #FFF6EE;
+    --color-text: #3A1F2B;
+    --color-primary: #FF69B4;
+    --color-primary-hover: #E0559B;
+    --color-secondary: #FF8C00;
+    --color-accent: #FFD700;
+    --color-surface: #FFDAB9;
+    --color-border: #F5C9A8;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.boxTL {
+    Position: fixed;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary);
+    width: 45%;
+    height: 40%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+
+.boxTR {
+    Position: fixed;
+    top: 0;
+    right: 0;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary);
+    width: 45%;
+    height: 40%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+}
+
+.boxBL {
+    Position: fixed;
+    bottom: 0;
+    left: 0;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary);
+    width: 45%;
+    height: 40%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.boxBR {
+    Position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary);
+    width: 45%;
+    height: 40%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+    
+.boxBR .circle:nth-child(1) {
+    margin-top: 0px;
+}
+
+.boxBR .circle:nth-child(2) {
+    margin-top: 100px;
+}
+
+.boxBR .circle:nth-child(3) {
+    margin-top: 200px;
+}
+
+.circle {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-accent);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
