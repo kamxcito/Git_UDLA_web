@@ -1,0 +1,145 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(247, 45, 45);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+header {
+    background-color: aqua;
+    min-height: 20%;
+}
+
+nav {
+    background-color: aliceblue;
+    min-height: 20%;
+}
+
+main {
+    background-color: beige;
+    min-height: 20%;
+}
+
+footer {
+    min-height: 20%;
+    background-color: blueviolet;
+}
+
+aside {
+    min-height: 20%;
+    background-color: aquamarine;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(200, 249, 166);
+        grid-template-columns: 20% 20% 40% 20%;
+        grid-template-rows: 25% 25% 25% 25%;
+        display: grid;
+        grid-template-areas:
+            "a a a b"
+            "c c c c"
+            "c c c c"
+            "e e f f";
+    }
+
+    header {
+        grid-area: a;
+        background-color: aqua;
+    }
+
+    nav {
+        grid-area: b;
+        background-color: aliceblue;
+    }
+
+    main {
+        grid-area: c;
+        background-color: beige;
+    display: flex;
+        flex-direction: column;
+    }
+
+    #arri {
+        height: 50%;
+        width: 100%;
+        background-color: brown;
+    }
+
+    #abaj {
+        height: 50%;
+        width: 100%;
+        background-color: blue;
+    }
+    footer {
+        grid-area: e;
+        background-color: blueviolet;
+    }
+
+    aside { 
+        grid-area: f;
+        background-color: aquamarine;
+    }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(166, 185, 249);
+        grid-template-columns: 35% 20% 20% 25%;
+        grid-template-rows: 25% 25% 25% 25%;
+        display: grid;
+        grid-template-areas:
+            "a b b b"
+            "a c c d"
+            "a c c d"
+            "a f f f";
+    }
+
+    nav {
+        grid-area: a;
+        background-color: burlywood;
+    }
+
+    header {
+        grid-area: b;
+        background-color: aquamarine;
+    }
+
+    main {
+        grid-area: c;
+        background-color: chocolate;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #arri {
+        height: 50%;
+        width: 100%;
+        background-color: brown;
+    }
+
+    #abaj {
+        height: 50%;
+        width: 100%;
+        background-color: blue;
+    }
+
+    aside {
+        grid-area: d;
+        background-color: rgb(255, 127, 217);
+    }
+}
