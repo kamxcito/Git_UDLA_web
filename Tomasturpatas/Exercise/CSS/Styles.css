@@ -1,0 +1,25 @@
+.body{
+    width: 100vw;
+    height: 100vh;
+}
+
+#uno{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tres{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cuatro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

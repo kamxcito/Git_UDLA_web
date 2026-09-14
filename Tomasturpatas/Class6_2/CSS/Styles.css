@@ -1,0 +1,20 @@
+ul {
+    display: flex;
+    font-size: 3rem;
+    list-style: none;
+}
+
+li {
+    margin: 20px;
+
+    &:hover {
+        background-color: #d1d40e;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+}
