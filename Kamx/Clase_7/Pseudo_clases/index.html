@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía interactiva de pseudoclases y pseudoelementos CSS con ejemplos explicados en español.">
+    <title>CSS en acción | Pseudoclases y pseudoelementos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <a class="brand" href="#inicio"><span class="brand-icon" aria-hidden="true">{ }</span> CSS en acción</a>
+        <nav aria-label="Secciones de la guía">
+            <a href="#pseudoclases">Pseudoclases <span>: </span></a>
+            <a href="#pseudoelementos">Pseudoelementos <span>::</span></a>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="hero" id="inicio" aria-labelledby="titulo">
+            <div class="hero-copy">
+                <p class="eyebrow">LABORATORIO INTERACTIVO · HTML + CSS</p>
+                <h1>Un pequeño selector.<br>Un <span>gran cambio.</span></h1>
+                <p class="hero-description">Pasa el cursor, escribe, selecciona y descubre cómo CSS cambia los elementos según su estado o da estilo a una parte de ellos.</p>
+                <a class="primary-link" href="#pseudoclases">Explorar los ejemplos <span aria-hidden="true">↘</span></a>
+                <p class="hero-note">Sin JavaScript. Todo lo que ves ocurre con CSS.</p>
+            </div>
+            <div class="concepts">
+                <article class="concept concept-class">
+                    <span class="concept-symbol" aria-hidden="true">:</span>
+                    <div><p class="eyebrow">PSEUDOCLASE</p><h2>El estado o la condición</h2><p>Selecciona un elemento cuando cumple una condición: tiene el cursor encima, está marcado o es el primero de una lista.</p><code>button:hover</code></div>
+                </article>
+                <article class="concept concept-element">
+                    <span class="concept-symbol" aria-hidden="true">::</span>
+                    <div><p class="eyebrow">PSEUDOELEMENTO</p><h2>Una parte del elemento</h2><p>Da estilo a una parte, como la primera letra, o genera contenido antes o después del contenido del elemento.</p><code>p::first-letter</code></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="examples-section" id="pseudoclases" aria-labelledby="titulo-clases">
+            <div class="section-heading"><div><p class="eyebrow">01 / ESTADOS Y CONDICIONES</p><h2 id="titulo-clases">Pseudoclases</h2></div><span class="section-pill">Se escriben con <strong>:</strong></span></div>
+            <p class="section-intro">El elemento ya existe. La pseudoclase decide <strong>cuándo</strong> se aplica el estilo.</p>
+            <div class="card-grid">
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">01</span><span class="category">Interacción</span></div>
+                    <h3>Un botón que responde</h3><p class="selector"><code>:hover</code> <code>:active</code></p>
+                    <p>Acá se aplica <code>:hover</code> al botón: se vuelve morado al pasar el cursor. Con <code>:active</code> cambia a rosa mientras lo mantienes presionado.</p>
+                    <div class="demo demo-centered"><button class="interaction-button" type="button">Pasa el cursor por aquí</button></div>
+                    <p class="try-it">Prueba: pasa el cursor y mantén presionado el botón.</p>
+                    <pre><code>.interaction-button:hover { background: #6d42d8; }
+.interaction-button:active { background: #be185d; }</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">02</span><span class="category">Posición</span></div>
+                    <h3>El primero y el último</h3><p class="selector"><code>:first-child</code> <code>:last-child</code></p>
+                    <p>En esta lista de botones, el primero es morado y el último es verde porque ocupan esas posiciones entre los hijos de su contenedor. Los del centro conservan su estilo base.</p>
+                    <div class="demo position-buttons"><button type="button">Primero</button><button type="button">Segundo</button><button type="button">Tercero</button><button type="button">Último</button></div>
+                    <p class="try-it">Observa: el color depende de la posición del botón.</p>
+                    <pre><code>.position-buttons button:first-child { background: #6d42d8; }
+.position-buttons button:last-child { background: #16735a; }</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">03</span><span class="category">Patrones</span></div>
+                    <h3>Una lista con ritmo</h3><p class="selector"><code>:nth-child(odd)</code> <code>:nth-child(even)</code></p>
+                    <p>Acá se pintan las filas según su posición: las impares (<code>odd</code>) son moradas claras y las pares (<code>even</code>) son verdes claras. El conteo empieza en 1.</p>
+                    <div class="demo"><ol class="striped-list"><li>HTML · posición impar</li><li>CSS · posición par</li><li>JavaScript · posición impar</li><li>Accesibilidad · posición par</li></ol></div>
+                    <p class="try-it">Observa: el patrón se repite cada dos elementos.</p>
+                    <pre><code>.striped-list li:nth-child(odd) { background: #eee8ff; }
+.striped-list li:nth-child(even) { background: #e1f3ea; }</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">04</span><span class="category">Enfoque</span></div>
+                    <h3>El campo tiene tu atención</h3><p class="selector"><code>:focus</code> <code>:focus-within</code></p>
+                    <p>El campo recibe un borde morado con <code>:focus</code>. Su contenedor también cambia de fondo gracias a <code>:focus-within</code>, porque contiene un elemento enfocado.</p>
+                    <div class="demo focus-panel"><label for="nombre">Tu nombre</label><input id="nombre" type="text" placeholder="Haz clic o llega con Tab" autocomplete="given-name"></div>
+                    <p class="try-it">Prueba: entra al campo y luego haz clic fuera de él.</p>
+                    <pre><code>.focus-panel input:focus { border-color: #6d42d8; }
+.focus-panel:focus-within { background: #eee8ff; }</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">05</span><span class="category">Selección</span></div>
+                    <h3>Marca y mira el cambio</h3><p class="selector"><code>:checked</code></p>
+                    <p>Cuando marcas la casilla, <code>:checked</code> selecciona el control. El combinador <code>+</code> permite dar estilo al texto que está justo después: se vuelve verde y aparece tachado.</p>
+                    <div class="demo demo-centered"><label class="check-task"><input type="checkbox"><span>Entender cómo funciona :checked</span></label></div>
+                    <p class="try-it">Prueba: marca y desmarca la casilla.</p>
+                    <pre><code>.check-task input:checked + span {
+    color: #16735a;
+    text-decoration: line-through;
+}</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">06</span><span class="category">Disponibilidad</span></div>
+                    <h3>No todos están habilitados</h3><p class="selector"><code>:enabled</code> <code>:disabled</code></p>
+                    <p>El primer botón está habilitado y recibe el color morado. El segundo tiene el atributo HTML <code>disabled</code>: no se puede activar y CSS lo muestra gris con <code>:disabled</code>.</p>
+                    <div class="demo availability-buttons"><button type="button">Habilitado</button><button type="button" disabled>Deshabilitado</button></div>
+                    <p class="try-it">Prueba: usa Tab; el botón deshabilitado se omite.</p>
+                    <pre><code>.availability-buttons button:enabled { background: #6d42d8; }
+.availability-buttons button:disabled { background: #e4e4e7; }</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">07</span><span class="category">Validación</span></div>
+                    <h3>¿Tiene formato de correo?</h3><p class="selector"><code>:valid</code> <code>:invalid</code></p>
+                    <p>El navegador comprueba el formato gracias a <code>type="email"</code>. Si el valor es válido, el borde es verde; si es inválido, es rojo. Esto comprueba el formato, no que la dirección exista.</p>
+                    <div class="demo validation-demo"><label for="correo">Correo de prueba (obligatorio)</label><input id="correo" type="email" placeholder="nombre@ejemplo.com" required aria-describedby="correo-help"><small id="correo-help">Compara «hola» con «hola@ejemplo.com». No se envían datos.</small></div>
+                    <p class="try-it">El campo vacío queda neutro usando :not(:placeholder-shown).</p>
+                    <pre><code>.validation-demo input:not(:placeholder-shown):valid {
+    border-color: #16735a;
+}
+.validation-demo input:not(:placeholder-shown):invalid {
+    border-color: #c0394b;
+}</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">08</span><span class="category">Exclusión</span></div>
+                    <h3>Todos, excepto uno</h3><p class="selector"><code>:not()</code></p>
+                    <p>Acá <code>:not(.especial)</code> selecciona los elementos que no tienen la clase <code>especial</code>. Por eso HTML y CSS tienen fondo morado claro; el elemento excluido conserva el fondo blanco.</p>
+                    <div class="demo demo-centered tags-demo"><span>HTML</span><span>CSS</span><span class="especial">Especial · excluido</span></div>
+                    <p class="try-it">Observa: :not() excluye lo que coincide con su argumento.</p>
+                    <pre><code>.tags-demo span:not(.especial) {
+    background: #eee8ff;
+    color: #5930b5;
+}</code></pre>
+                </article>
+
+                <article class="example-card wide-card">
+                    <div class="card-top"><span class="example-number">09</span><span class="category">Navegación</span></div>
+                    <h3>El destino también tiene estilo</h3><p class="selector"><code>:target</code></p>
+                    <p>Al seguir este enlace, la URL termina en <code>#mensaje-destino</code>. El elemento con ese identificador coincide con <code>:target</code> y se resalta con un fondo morado claro.</p>
+                    <div class="demo target-demo"><a href="#mensaje-destino">Resaltar el mensaje ↗</a><p id="mensaje-destino">Soy el destino del enlace. Mi estilo cambia cuando mi ID aparece en la URL.</p><a href="#pseudoclases">Quitar el resaltado</a></div>
+                    <p class="try-it">Prueba: activa el enlace y después quita el resaltado.</p>
+                    <pre><code>#mensaje-destino:target { background: #eee8ff; border-color: #6d42d8; }</code></pre>
+                </article>
+            </div>
+        </section>
+
+        <section class="examples-section elements-section" id="pseudoelementos" aria-labelledby="titulo-elementos">
+            <div class="section-heading"><div><p class="eyebrow">02 / PARTES Y CONTENIDO GENERADO</p><h2 id="titulo-elementos">Pseudoelementos</h2></div><span class="section-pill">Se escriben con <strong>::</strong></span></div>
+            <p class="section-intro">Ahora elegimos <strong>qué parte</strong> del elemento queremos decorar.</p>
+            <div class="card-grid">
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">10</span><span class="category">Contenido generado</span></div>
+                    <h3>Antes y después del texto</h3><p class="selector"><code>::before</code> <code>::after</code></p>
+                    <p>La línea de la izquierda se genera con <code>::before</code> y el punto de la derecha con <code>::after</code>. Son adornos creados en CSS usando <code>content</code>; no son etiquetas extra en el HTML.</p>
+                    <div class="demo demo-centered"><span class="generated-label">Texto original en HTML</span></div>
+                    <p class="try-it">Observa: ambos adornos usan content: "" y un fondo de color.</p>
+                    <pre><code>.generated-label::before {
+    content: ""; width: 24px; height: 3px;
+    background: #6d42d8;
+}
+.generated-label::after {
+    content: ""; width: 10px; height: 10px;
+    background: #16735a; border-radius: 50%;
+}</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">11</span><span class="category">Tipografía</span></div>
+                    <h3>Una inicial protagonista</h3><p class="selector"><code>::first-letter</code></p>
+                    <p>Acá solo la primera letra del párrafo es más grande y morada. El resto del texto mantiene su tamaño. No hizo falta encerrar la letra en una etiqueta adicional.</p>
+                    <div class="demo"><p class="drop-cap">Cada detalle cuenta. Con un pseudoelemento, la primera letra de este párrafo se convierte en una inicial destacada, como en el comienzo de un libro.</p></div>
+                    <p class="try-it">Observa: solo la «C» recibe este estilo.</p>
+                    <pre><code>.drop-cap::first-letter {
+    font-size: 3.4rem;
+    color: #6d42d8;
+}</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">12</span><span class="category">Tipografía</span></div>
+                    <h3>La primera línea se distingue</h3><p class="selector"><code>::first-line</code></p>
+                    <p>La primera línea visible del párrafo es verde y está en negrita. No equivale a la primera oración: las palabras seleccionadas dependen del espacio disponible.</p>
+                    <div class="demo"><p class="first-line-demo">Esta primera línea tiene algo especial. Si cambias el ancho de la ventana, verás que cambia la cantidad de palabras que reciben el estilo. CSS sigue la línea que el navegador dibuja.</p></div>
+                    <p class="try-it">Prueba: cambia el ancho de la ventana.</p>
+                    <pre><code>.first-line-demo::first-line {
+    color: #16735a;
+    font-weight: 700;
+}</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">13</span><span class="category">Selección de texto</span></div>
+                    <h3>Tu selección, otro color</h3><p class="selector"><code>::selection</code></p>
+                    <p>Cuando seleccionas una parte de este párrafo, el texto seleccionado tiene fondo morado y letras blancas. El estilo se aplica a la selección, no a todo el párrafo.</p>
+                    <div class="demo"><p class="selection-demo">Selecciona estas palabras arrastrando el cursor. En una pantalla táctil, mantén presionado el texto y ajusta la selección. ¡Ahora puedes ver ::selection en acción!</p></div>
+                    <p class="try-it">Prueba: selecciona algunas palabras de este recuadro.</p>
+                    <pre><code>.selection-demo::selection {
+    background: #6d42d8;
+    color: white;
+}</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">14</span><span class="category">Formularios</span></div>
+                    <h3>Una pista dentro del campo</h3><p class="selector"><code>::placeholder</code></p>
+                    <p>La pista que aparece cuando el campo está vacío se pinta de morado y en cursiva. Al escribir, desaparece y tu texto usa el estilo normal del campo.</p>
+                    <div class="demo"><label for="idea">Tu próxima idea</label><input class="placeholder-demo" id="idea" type="text" placeholder="Por ejemplo: una galería de fotos..."></div>
+                    <p class="try-it">Prueba: escribe algo y bórralo para volver a ver la pista.</p>
+                    <pre><code>.placeholder-demo::placeholder {
+    color: #7656a5;
+    font-style: italic;
+}</code></pre>
+                </article>
+
+                <article class="example-card">
+                    <div class="card-top"><span class="example-number">15</span><span class="category">Listas</span></div>
+                    <h3>Las viñetas tienen su estilo</h3><p class="selector"><code>::marker</code></p>
+                    <p>Acá se cambia el color y el tamaño de las viñetas con <code>::marker</code>. El texto de cada elemento sigue con su estilo original: el selector solo afecta al marcador.</p>
+                    <div class="demo"><ul class="marker-list"><li>Inspecciona el elemento</li><li>Encuentra su selector</li><li>Experimenta con los estilos</li></ul></div>
+                    <p class="try-it">Observa: las viñetas son moradas; el texto no.</p>
+                    <pre><code>.marker-list li::marker {
+    color: #6d42d8;
+    font-size: 1.4em;
+}</code></pre>
+                </article>
+            </div>
+        </section>
+
+        <aside class="closing-note"><span aria-hidden="true">{ }</span><div><h2>Ahora te toca experimentar</h2><p>Abre <code>style.css</code>, busca el selector de un ejemplo y cambia sus colores o tamaños. Recuerda: <strong>:</strong> selecciona por estado o condición y <strong>::</strong> da estilo a una parte o genera contenido.</p></div></aside>
+    </main>
+    <footer><p>CSS en acción <span>·</span> Clase 7 / Guía práctica</p><a href="#inicio">Volver al inicio ↑</a></footer>
+</body>
+</html>
