@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#uno{
+    border: solid 1px black;
+    width: 600px;
+    height: 400px;
+    /* background-image: linear-gradient(to bottom yellow yellow blue red);
+    background-image: radial-gradient(yellow yellow blue red); */
+    background-image: radial-gradient(circle, yellow ,yellow, blue, red);
+    /* transform: rotateX(65deg);
+    transform: skew();
+    transform: scale(2); */
+    transition: 0.5s;
+    &:hover{
+        transform: rotate(45deg);
+        transform: scale(1);
+    }
+
+}
