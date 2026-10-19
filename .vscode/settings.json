@@ -1,0 +1,6 @@
+{
+    "cloude-code-toolbox.intelligence.autoScanMcpSkillsOnWorkspaceOpen": true,
+    "cloude-code-toolbox.tokenOptimization.enabled": true,
+    "cloude-code-toolbox.thinkingMachineMode.enabled": false,
+    "cloude-code-toolbox.safetyGuards.enabled": false
+}
