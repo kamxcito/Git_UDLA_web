@@ -1,0 +1,123 @@
+.avocado-card.MuiCard-root {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  background: #fffef9;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.avocado-card:hover {
+  border-color: #a7b28e;
+  box-shadow: 0 10px 24px #233c2c0a;
+}
+
+.card-image-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image.MuiCardMedia-root {
+  height: 224px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.avocado-card:hover .card-image {
+  transform: scale(1.035);
+}
+
+.card-number {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: #fffef9ed;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.card-content.MuiCardContent-root {
+  padding: 24px 24px 0;
+}
+
+.card-category.MuiTypography-root {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #697c48;
+  margin-bottom: 12px;
+}
+
+.card-title.MuiTypography-root {
+  font: 27px/1.14 Georgia, "Times New Roman", serif;
+  color: var(--color-ink);
+  letter-spacing: -0.6px;
+  margin-bottom: 13px;
+}
+
+.card-description.MuiTypography-root {
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.card-actions.MuiCardActions-root {
+  padding: 16px 24px 20px;
+  margin-top: auto;
+}
+
+.card-link.MuiButton-root {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 11px 0 0;
+  min-height: 44px;
+  border-top: 1px solid var(--color-line);
+  border-radius: 0;
+  text-transform: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card-link.MuiButton-root:hover {
+  background: transparent;
+  color: #6b813e;
+}
+
+.card-link > span {
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) and (min-width: 701px) {
+  .card-content.MuiCardContent-root {
+    padding: 20px 18px 0;
+  }
+
+  .card-actions.MuiCardActions-root {
+    padding-inline: 18px;
+  }
+
+  .card-title.MuiTypography-root {
+    font-size: 24px;
+  }
+
+  .card-image.MuiCardMedia-root {
+    height: 190px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .card-image.MuiCardMedia-root {
+    height: 240px;
+  }
+
+}

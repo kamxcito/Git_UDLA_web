@@ -1,13 +1,20 @@
-import React from 'react'
-import logomain from "../../../public/avocado.png"
-import "./header.css"
+import "./Header.css"
 
 const Header = () => {
   return (
-    <header>
-      <h1>My App</h1>
-      <img src={logomain} alt="Logo" />
-      <p>This is a simple paragraph in the header.</p>
+    <header className="site-header" id="inicio">
+      <div className="container header-inner">
+        <a href="#inicio" className="brand" aria-label="Avocado, inicio">
+          <img src="/avocado.png" alt="" width="38" height="38" />
+          <span>avocado<span className="brand-dot">.</span></span>
+        </a>
+        <nav className="header-nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#descubre">Descubre</a>
+          <a href="#guia">Guía práctica</a>
+        </nav>
+        <a className="header-link" href="#descubre">Un poco más de verde <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
   )
 }
