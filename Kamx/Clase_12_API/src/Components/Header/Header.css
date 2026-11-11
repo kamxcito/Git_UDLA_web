@@ -1,0 +1,4 @@
+.site-header { padding: 28px max(24px, calc((100% - 1200px) / 2)); border-bottom: 1px solid #34404b; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.brand { color: #ff4655; font-size: 24px; font-weight: 900; text-decoration: none; letter-spacing: 2px; }
+.brand span { color: #ece8e1; font-size: 12px; letter-spacing: 3px; }
+.site-header p { color: #b6bec8; font-size: 14px; }

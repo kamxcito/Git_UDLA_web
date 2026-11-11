@@ -1,0 +1,10 @@
+.agents-main { width: min(1200px, calc(100% - 48px)); margin: 0 auto; padding: 56px 0; min-height: 75vh; }
+.section-heading { margin-bottom: 36px; }
+.eyebrow { color: #ff4655; font-size: 12px; font-weight: 700; letter-spacing: 3px; }
+.section-heading h1 { font-size: clamp(36px, 6vw, 64px); text-transform: uppercase; line-height: 1.1; margin: 14px 0 20px; }
+.section-heading h1 span { color: #ff4655; }
+.section-heading > p:last-child { color: #b6bec8; line-height: 1.6; }
+.agent-count { margin-bottom: 18px; color: #b6bec8; font-size: 14px; }
+.agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px; }
+.status { padding: 32px; background: #182530; border: 1px solid #34404b; line-height: 1.7; }
+.status button { margin-top: 16px; padding: 10px 22px; background: #ff4655; color: #fff; border: 0; font-weight: 700; }
