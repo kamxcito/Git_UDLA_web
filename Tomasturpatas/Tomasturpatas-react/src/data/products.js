@@ -1,0 +1,108 @@
+export const categories = ['Todos', 'Tecnología', 'Libros', 'Hogar', 'Accesorios']
+
+export const products = [
+  {
+    id: 1,
+    title: 'Audífonos inalámbricos',
+    description: 'Sonido nítido, batería de larga duración. Muy buen estado.',
+    price: '$28',
+    category: 'Tecnología',
+    location: 'Biblioteca central',
+    seller: 'Valentina',
+    publishedAt: 'Hace 2 horas',
+    image:
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Audífonos color crema sobre un fondo amarillo',
+  },
+  {
+    id: 2,
+    title: 'Kit de libros de diseño',
+    description: 'Tres libros de diseño y creatividad. Páginas impecables.',
+    price: '$18',
+    category: 'Libros',
+    location: 'Facultad de Artes',
+    seller: 'Mateo',
+    publishedAt: 'Hace 5 horas',
+    image:
+      'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Libros apilados sobre una mesa',
+  },
+  {
+    id: 3,
+    title: 'Lámpara de escritorio',
+    description: 'Luz cálida regulable, perfecta para esas noches de estudio.',
+    price: '$15',
+    category: 'Hogar',
+    location: 'Residencias norte',
+    seller: 'Andrea',
+    publishedAt: 'Ayer',
+    image:
+      'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Lámpara de escritorio junto a una planta',
+  },
+  {
+    id: 4,
+    title: 'Mochila urbana',
+    description: 'Espaciosa, cómoda y con compartimento para portátil.',
+    price: '$22',
+    category: 'Accesorios',
+    location: 'Cafetería del campus',
+    seller: 'Sebastián',
+    publishedAt: 'Ayer',
+    image:
+      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Mochila verde para uso diario',
+  },
+  {
+    id: 5,
+    title: 'Planta monstera',
+    description: 'Lista para alegrar tu espacio. Incluye maceta de cerámica.',
+    price: '$12',
+    category: 'Hogar',
+    location: 'Jardín principal',
+    seller: 'Camila',
+    publishedAt: 'Hace 2 días',
+    image:
+      'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Planta verde en una maceta decorativa',
+  },
+  {
+    id: 6,
+    title: 'Zapatillas clásicas',
+    description: 'Cómodas y ligeras, talla 38. Poco uso.',
+    price: '$30',
+    category: 'Accesorios',
+    location: 'Edificio de Ciencias',
+    seller: 'Nicolás',
+    publishedAt: 'Hace 3 días',
+    image:
+      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Zapatilla deportiva roja',
+  },
+  {
+    id: 7,
+    title: 'Silla de estudio',
+    description: 'Respaldo cómodo y altura ajustable. En excelente estado.',
+    price: '$35',
+    category: 'Hogar',
+    location: 'Residencias sur',
+    seller: 'Sofía',
+    publishedAt: 'Hace 4 días',
+    image:
+      'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Silla moderna de color claro',
+  },
+  {
+    id: 8,
+    title: 'Calculadora científica',
+    description: 'Lista para tus clases de matemáticas e ingeniería.',
+    price: '$16',
+    category: 'Tecnología',
+    location: 'Facultad de Ingeniería',
+    seller: 'Diego',
+    publishedAt: 'Hace 5 días',
+    image:
+      'https://images.unsplash.com/photo-1587145820266-a5951ee6f620?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Calculadora científica sobre un escritorio',
+  },
+]

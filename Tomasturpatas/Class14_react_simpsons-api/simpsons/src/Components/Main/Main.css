@@ -1,0 +1,34 @@
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+    #cards{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    #error{
+        color: #b00020;
+    }
+    #paginacion{
+        display: flex;
+        gap: 10px;
+        button{
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background-color: #1f75cb;
+            color: white;
+            cursor: pointer;
+            &:disabled{
+                background-color: #aaa;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

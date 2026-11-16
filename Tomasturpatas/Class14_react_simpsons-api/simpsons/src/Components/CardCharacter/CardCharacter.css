@@ -1,0 +1,36 @@
+#cardCharacter{
+    padding: 20px;
+    border: solid 1px rgb(197, 194, 194);
+    width: 240px;
+    border-radius: 10px;
+    background-color: #fed41d;
+    cursor: pointer;
+    color: #222;
+    text-align: left;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+    &:hover{
+        background-color: #ffe56b;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgb(31 117 203 / 20%);
+    }
+    &:focus-visible{
+        outline: 3px solid #1f75cb;
+        outline-offset: 3px;
+    }
+    h2{
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    img{
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        border-radius: 10px;
+        background-color: white;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+}
