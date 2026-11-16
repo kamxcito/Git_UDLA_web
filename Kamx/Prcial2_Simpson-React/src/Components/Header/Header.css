@@ -1,0 +1,130 @@
+.hero {
+  position: relative;
+  display: grid;
+  min-height: 270px;
+  place-items: center;
+  overflow: hidden;
+  padding: 40px 18px 62px;
+  background: linear-gradient(180deg, #42b6ed 0%, #82d7f5 100%);
+  isolation: isolate;
+}
+
+.hero::after {
+  position: absolute;
+  z-index: -1;
+  right: -5%;
+  bottom: -60px;
+  left: -5%;
+  height: 100px;
+  border-radius: 50% 50% 0 0;
+  background: #dff5ff;
+  content: "";
+}
+
+.hero-copy {
+  z-index: 1;
+  color: #193f68;
+  text-align: center;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  color: #ffd827;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-shadow: 3px 4px 0 #173f68, 5px 6px 0 #fff;
+  -webkit-text-stroke: 1px #173f68;
+}
+
+.hero-copy p {
+  margin: 14px 0 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.hero-copy .hero-eyebrow {
+  margin: 0 0 8px;
+  color: #173f68;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-sun {
+  position: absolute;
+  top: 28px;
+  right: 12%;
+  width: 76px;
+  height: 76px;
+  border: 8px solid rgb(255 216 39 / 38%);
+  border-radius: 50%;
+  background: #ffdc3c;
+  box-shadow: 0 0 0 13px rgb(255 216 39 / 14%);
+}
+
+.cloud {
+  position: absolute;
+  width: 145px;
+  height: 42px;
+  border-radius: 45px;
+  background: #fff;
+  filter: drop-shadow(0 5px 0 rgb(35 98 133 / 10%));
+}
+
+.cloud::before,
+.cloud::after {
+  position: absolute;
+  bottom: 12px;
+  border-radius: 50%;
+  background: inherit;
+  content: "";
+}
+
+.cloud::before {
+  left: 23px;
+  width: 58px;
+  height: 58px;
+}
+
+.cloud::after {
+  right: 20px;
+  width: 72px;
+  height: 72px;
+}
+
+.cloud-left {
+  bottom: 65px;
+  left: 8%;
+  transform: scale(0.82);
+}
+
+.cloud-right {
+  top: 74px;
+  right: 6%;
+  transform: scale(0.7);
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: 230px;
+  }
+
+  .hero-sun {
+    top: 20px;
+    right: 5%;
+    width: 54px;
+    height: 54px;
+  }
+
+  .cloud-left {
+    left: -52px;
+  }
+
+  .cloud-right {
+    top: auto;
+    right: -58px;
+    bottom: 45px;
+  }
+}
