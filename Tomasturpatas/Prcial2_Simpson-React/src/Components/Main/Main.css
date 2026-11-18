@@ -1,0 +1,174 @@
+.main-decorations {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.background-homer {
+  position: absolute;
+  bottom: 4vh;
+  left: -55px;
+  width: clamp(220px, 28vw, 360px);
+  max-height: 65vh;
+  object-fit: contain;
+  opacity: 0.16;
+}
+
+.background-donut {
+  position: absolute;
+  right: 5vw;
+  bottom: 9vh;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e9f9ff 0 22%, var(--rosquilla) 23% 60%, #bd7041 61% 74%, transparent 75%);
+  opacity: 0.17;
+}
+
+.donut-sprinkle {
+  position: absolute;
+  z-index: 1;
+  width: 18px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.sprinkle-one {
+  top: 42px;
+  left: 88px;
+  background: #1f75cb;
+  transform: rotate(25deg);
+}
+
+.sprinkle-two {
+  top: 76px;
+  right: 32px;
+  background: #fed41d;
+  transform: rotate(-35deg);
+}
+
+.sprinkle-three {
+  bottom: 48px;
+  left: 45px;
+  background: #65a84f;
+  transform: rotate(-15deg);
+}
+
+.sprinkle-four {
+  right: 62px;
+  bottom: 30px;
+  background: #e74664;
+  transform: rotate(40deg);
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0 20px;
+}
+
+.section-heading {
+  margin: 0 0 22px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 4px 0;
+  color: #1f75cb;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.section-label {
+  margin: 0;
+  color: #806600;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.total-characters {
+  margin: 0 0 16px;
+  color: #42586b;
+  text-align: center;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.status-message {
+  margin: 28px 0;
+  padding: 16px;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 94%);
+  text-align: center;
+}
+
+.error-message {
+  color: #b00020;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 28px 0 10px;
+}
+
+.pagination button {
+  min-height: 42px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #1f75cb;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.pagination button:focus-visible {
+  outline: 3px solid #fed41d;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    width: calc(100% - 22px);
+  }
+
+  .character-grid {
+    grid-template-columns: minmax(0, 240px);
+  }
+
+  .pagination button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .background-homer {
+    left: -115px;
+    width: 210px;
+    opacity: 0.12;
+  }
+
+  .background-donut {
+    right: -40px;
+    bottom: 3vh;
+    width: 125px;
+    height: 125px;
+    opacity: 0.12;
+  }
+}

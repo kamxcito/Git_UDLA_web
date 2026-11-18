@@ -1,0 +1,53 @@
+.characters-page {
+  width: 100%;
+}
+
+.characters-section {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 2.5rem);
+}
+
+.section-heading {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  margin: 0 0 0.65rem;
+  color: #b94f10;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-heading h1 {
+  margin: 0;
+  color: #211b17;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.section-heading > p:last-child {
+  margin: 0.9rem 0 0;
+  color: #625a54;
+  font-size: 1.05rem;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1.25rem;
+}
+
+.request-message {
+  margin: 2rem auto;
+  color: #514840;
+  text-align: center;
+}
+
+.request-error {
+  color: #a22d1e;
+}

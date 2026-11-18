@@ -1,0 +1,36 @@
+#browser{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fed41d;
+    select, input{
+        padding: 8px;
+        border-radius: 6px;
+        border: solid 1px #999;
+    }
+    select{
+        flex: 1 1 280px;
+    }
+    input{
+        flex: 1 1 220px;
+    }
+    button{
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        background-color: #1f75cb;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            background-color: #165a9e;
+        }
+    }
+    #browser-mensaje{
+        width: 100%;
+        color: #b00020;
+    }
+}

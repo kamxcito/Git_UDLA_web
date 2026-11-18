@@ -1,0 +1,42 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem clamp(1.25rem, 5vw, 5rem);
+  color: #fff;
+  background: #171717;
+  border-bottom: 4px solid #e87516;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-brand img {
+  display: block;
+  width: min(230px, 48vw);
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.site-header p {
+  margin: 0;
+  color: #e6e1dc;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-block: 1rem;
+  }
+
+  .site-header p {
+    text-align: center;
+  }
+}

@@ -1,0 +1,83 @@
+.api-selector {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  gap: 16px;
+  width: min(1120px, calc(100% - 32px));
+  margin: 22px auto 0;
+  padding: 18px;
+  border: 2px solid #fed41d;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.api-selector-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.api-selector label {
+  font-weight: 700;
+}
+
+.api-selector select,
+.api-selector input {
+  width: 100%;
+  min-height: 42px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.api-selector-add {
+  display: flex;
+  gap: 8px;
+}
+
+.api-selector button {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #1f75cb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.api-selector button:hover {
+  background: #165a9e;
+}
+
+.api-selector button:focus-visible,
+.api-selector input:focus-visible,
+.api-selector select:focus-visible {
+  outline: 3px solid #fed41d;
+  outline-offset: 2px;
+}
+
+.api-selector-error {
+  margin: 0;
+  color: #b00020;
+}
+
+@media (max-width: 700px) {
+  .api-selector {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .api-selector {
+    width: calc(100% - 22px);
+    padding: 14px;
+  }
+
+  .api-selector-add {
+    flex-direction: column;
+  }
+}

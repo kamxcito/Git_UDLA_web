@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --amarillo: #fed41d;
+  --azul: #1f75cb;
+  --azul-oscuro: #14477f;
+  --cielo: #8fdcff;
+  --blanco-nube: #ffffff;
+  --rosquilla: #e8a6b8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #233344;
+  background: #e9f9ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #e9f9ff;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}

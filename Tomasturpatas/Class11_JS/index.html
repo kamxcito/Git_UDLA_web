@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Esta sección configura la página y conecta los archivos de estilos y JavaScript. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora básica</title>
+    <link rel="stylesheet" href="Styles.css">
+    <script src="test2.JS" defer></script>
+</head>
+<body>
+    <!-- El encabezado explica el propósito de la página. -->
+    <header class="page-header">
+        <h1>Mi calculadora</h1>
+        <p>Practica operaciones matemáticas básicas.</p>
+    </header>
+
+    <!-- La calculadora reúne la pantalla y todos los botones. -->
+    <main class="calculator" aria-label="Calculadora básica">
+        <!-- La pantalla muestra el número que se está escribiendo y los resultados. -->
+        <input
+            class="calculator__display"
+            id="display"
+            type="text"
+            value="0"
+            aria-label="Pantalla de la calculadora"
+            aria-live="polite"
+            readonly
+        >
+
+        <!-- Cada botón usa data-action o data-number para que JavaScript sepa qué hacer. -->
+        <section class="calculator__keys" aria-label="Botones de la calculadora">
+            <button class="key key--utility" type="button" data-action="clear">AC</button>
+            <button class="key key--utility" type="button" data-action="delete">DEL</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="/" aria-label="Dividir">÷</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="*" aria-label="Multiplicar">×</button>
+
+            <button class="key" type="button" data-number="7">7</button>
+            <button class="key" type="button" data-number="8">8</button>
+            <button class="key" type="button" data-number="9">9</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="-" aria-label="Restar">−</button>
+
+            <button class="key" type="button" data-number="4">4</button>
+            <button class="key" type="button" data-number="5">5</button>
+            <button class="key" type="button" data-number="6">6</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="+" aria-label="Sumar">+</button>
+
+            <button class="key" type="button" data-number="1">1</button>
+            <button class="key" type="button" data-number="2">2</button>
+            <button class="key" type="button" data-number="3">3</button>
+            <button class="key key--equals" type="button" data-action="equals">=</button>
+
+            <button class="key key--zero" type="button" data-number="0">0</button>
+            <button class="key" type="button" data-action="decimal">.</button>
+        </section>
+    </main>
+</body>
+</html>
