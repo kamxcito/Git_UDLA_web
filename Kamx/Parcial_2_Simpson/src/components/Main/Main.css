@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.characters-main {
+  width: min(1100px, 92%);
+  margin: 40px auto 56px;
+}
+.characters-main h1 {
+  margin-bottom: 10px;
+  font-size: clamp(28px, 5vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+.main-intro {
+  margin-bottom: 30px;
+  color: #657184;
+}
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 20px;
+}
+.list-message {
+  padding: 32px 0;
+}

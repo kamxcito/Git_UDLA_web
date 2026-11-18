@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #263449; background: #f4faff; line-height: 1.6; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+a { color: #245b78; }
+:focus-visible { outline: 3px solid #245b78; outline-offset: 4px; }
+img { max-width: 100%; }
+h1, h2, h3, p { margin-top: 0; }
