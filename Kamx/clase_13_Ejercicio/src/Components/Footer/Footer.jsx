@@ -1,5 +1,7 @@
+// Cargamos los estilos del pie de página.
 import './Footer.css'
 
+// Este componente muestra el texto que aparece al final de la página.
 function Footer() {
   return (
     <footer className="footer">

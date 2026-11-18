@@ -1,0 +1,124 @@
+/* La tarjeta tiene dos columnas y colores inspirados en pergamino y oro. */
+.card-details {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d9c9a9;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fffdf8, #f1e9d9);
+  box-shadow: 0 12px 32px rgb(39 30 17 / 10%);
+}
+
+.card-details__portrait {
+  position: relative;
+  min-height: 360px;
+  background: #242b2b;
+}
+
+.card-details__portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.card-details__placeholder {
+  display: grid;
+  min-height: 360px;
+  height: 100%;
+  place-items: center;
+  padding: 24px;
+  color: #f4e9d2;
+  text-align: center;
+}
+
+.card-details__badge {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  padding: 10px 12px;
+  border: 1px solid #bca476;
+  border-radius: 6px;
+  background: rgb(22 28 28 / 90%);
+  color: #f6e6be;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-details__content {
+  align-self: center;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 40px);
+  overflow-wrap: anywhere;
+}
+
+.card-details__eyebrow {
+  margin: 0 0 16px;
+  color: #73603c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.card-details__name {
+  margin: 0;
+  color: #202b2a;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+}
+
+.card-details__divider {
+  width: 56px;
+  height: 3px;
+  margin: 24px 0;
+  background: #a88645;
+}
+
+.card-details__info {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+}
+
+.card-details__info dt {
+  margin-bottom: 7px;
+  color: #73603c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.card-details__info dd {
+  margin: 0;
+  color: #34403d;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* En pantallas pequeñas apilamos la imagen y los datos para facilitar la lectura. */
+@media (max-width: 600px) {
+  .card-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card-details__portrait {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .card-details__portrait img,
+  .card-details__placeholder {
+    min-height: 0;
+  }
+}

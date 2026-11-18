@@ -8,6 +8,14 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  /* La lista adapta la cantidad de columnas al espacio disponible. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 32px;
+}
+
+.details-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #59431c;
+  font-weight: 700;
 }

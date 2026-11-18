@@ -1,8 +1,8 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import './App.css'
-import Header from './components/Header/Header.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import Main from './components/Main/Main.jsx'
+import Header from './Components/Header/Header.jsx'
+import Footer from './Components/Footer/Footer.jsx'
+import Main from './Components/Main/Main.jsx'
 
 const theme = createTheme({
   palette: {

@@ -1,8 +1,30 @@
 .card {
+  border-radius: 14px;
+  overflow: hidden;
   padding: 12px;
   border: 1px solid #ccc;
   background-color: white;
   text-align: center;
+}
+
+.card__link {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: #263533;
+  color: #fff4d9;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  background: #42544f;
+}
+
+.card__link:focus-visible,
+.details-back:focus-visible {
+  outline: 3px solid #a88645;
+  outline-offset: 4px;
 }
 
 .card img {
