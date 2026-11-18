@@ -1,17 +1,17 @@
 import { useState } from "react"
-import "./Browser.css"
+import "./ApiSelector.css"
 
-function Browser({ apis, urlActual, onSelect, onAdd }) {
+function ApiSelector({ apis, urlActual, onSelect, onAdd }) {
   const [nuevaUrl, setNuevaUrl] = useState("")
   const [mensaje, setMensaje] = useState("")
 
-  const agregarUrl = (event) => {
+  const agregarApi = (event) => {
     event.preventDefault()
 
     try {
       const url = new URL(nuevaUrl.trim())
       if (url.protocol !== "http:" && url.protocol !== "https:") {
-        throw new Error("Protocolo no válido")
+        throw new Error("URL no válida")
       }
 
       onAdd(url.toString())
@@ -23,36 +23,34 @@ function Browser({ apis, urlActual, onSelect, onAdd }) {
   }
 
   return (
-    <section className="browser" aria-label="Selector de API">
-      <div className="browser-select">
+    <section className="api-selector" aria-label="Selector de API">
+      <div className="api-selector-field">
         <label htmlFor="api-select">API activa</label>
         <select
           id="api-select"
           value={urlActual}
           onChange={(event) => onSelect(event.target.value)}
         >
-          {apis.map((url) => (
-            <option key={url} value={url}>{url}</option>
-          ))}
+          {apis.map((url) => <option key={url} value={url}>{url}</option>)}
         </select>
       </div>
 
-      <form className="browser-add" onSubmit={agregarUrl}>
-        <label htmlFor="nueva-api">Agregar otra URL</label>
-        <div className="browser-add-controls">
+      <form className="api-selector-field" onSubmit={agregarApi}>
+        <label htmlFor="api-new-url">Agregar otra API</label>
+        <div className="api-selector-add">
           <input
-            id="nueva-api"
-            type="url"
-            placeholder="https://ejemplo.com/api"
+            id="api-new-url"
+            type="text"
             value={nuevaUrl}
             onChange={(event) => setNuevaUrl(event.target.value)}
+            placeholder="https://ejemplo.com/api"
           />
-          <button type="submit">Agregar API</button>
+          <button type="submit">Agregar</button>
         </div>
-        {mensaje && <p className="browser-message" role="alert">{mensaje}</p>}
+        {mensaje && <p className="api-selector-error" role="alert">{mensaje}</p>}
       </form>
     </section>
   )
 }
 
-export default Browser
+export default ApiSelector

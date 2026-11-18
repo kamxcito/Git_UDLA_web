@@ -1,0 +1,146 @@
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 240px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 24px;
+  background: linear-gradient(180deg, #4fc3f7 0%, #bdeeff 100%);
+  text-align: center;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 7vw, 90px);
+}
+
+.header-content img {
+  width: 100px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.site-header-title {
+  padding: 16px 24px 20px;
+  border: 4px solid var(--azul-oscuro);
+  border-radius: 18px;
+  background: var(--amarillo);
+  box-shadow: 0 7px 0 rgb(20 71 127 / 18%);
+}
+
+.site-header-title p {
+  margin: 0 0 8px;
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-header-title h1 {
+  margin: 0;
+  color: var(--azul);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 2px 3px 0 #fff;
+}
+
+.header-cloud {
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  height: 44px;
+  border-radius: 40px;
+  background: var(--blanco-nube);
+  box-shadow: 28px -22px 0 4px var(--blanco-nube),
+    70px -12px 0 -2px var(--blanco-nube),
+    105px 3px 0 -8px var(--blanco-nube);
+  opacity: 0.9;
+  pointer-events: none;
+  animation: mover-nube 58s linear infinite alternate;
+}
+
+.cloud-one {
+  top: 48px;
+  left: 3%;
+  transform: scale(0.9);
+  animation-duration: 54s;
+}
+
+.cloud-two {
+  top: 125px;
+  right: 7%;
+  transform: scale(0.72);
+  animation-duration: 72s;
+  animation-direction: alternate-reverse;
+}
+
+.cloud-three {
+  top: 16px;
+  left: 45%;
+  transform: scale(0.55);
+  animation-duration: 80s;
+}
+
+@keyframes mover-nube {
+  from {
+    translate: -24px 0;
+  }
+  to {
+    translate: 75px 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .site-header {
+    min-height: 195px;
+    padding: 12px 8px;
+  }
+
+  .header-content {
+    gap: 10px;
+  }
+
+  .header-content img {
+    width: 62px;
+    height: 105px;
+  }
+
+  .site-header-title {
+    padding: 12px 10px 14px;
+    border-width: 3px;
+  }
+
+  .site-header-title p {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 700px) {
+  .cloud-three {
+    display: none;
+  }
+
+  .cloud-one {
+    left: -90px;
+    transform: scale(0.55);
+  }
+
+  .cloud-two {
+    right: -100px;
+    transform: scale(0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-cloud {
+    animation: none;
+  }
+}
